@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Library</title>
-    <script src="script.js"></script>
+    <script async src="script.js"></script>
     <link rel="stylesheet" href="./styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,10 +14,31 @@
     />
   </head>
   <body>
+    <dialog id="book-modal">
+      <form id="form-add">
+        <label for="name-input">Name of the book:</label>
+        <input type="text" name="name-input" id="name-input" required autofocus />
+        <label for="author-input">Author's name:</label>
+        <input type="text" name="author-input" id="author-input" required />
+        <label for="number-pages">Number of pages:</label>
+        <input type="number" name="number-pages" id="number-pages" required />
+        <label for="choice-radio" >Have you read yet?</label>
+        <label>
+          <input id="rd1" type="radio" name="choice-radio" required>
+          Yes
+        </label>
+        <label>
+          <input id="rd2" type="radio" name="choice-radio" required>
+          No
+        </label>
+        <input type="submit" value="submit"></input>
+        <button class="close-modal" >Close</button>
+      </form>
+    </dialog>
     <div class="main">
       <h1>Library</h1>
       <div class="cards">
-        <div class="card">
+        <!-- <div class="card">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <title>book</title>
             <path
@@ -27,7 +48,7 @@
           <p>Name: <span class="book-name">hello</span></p>
           <p>Author: <span class="author-name">como</span></p>
           <p>Number of pages: <span class="number-pages">estas</span></p>
-          <p>Have read?... no</p>
+          <p>Have read?... <span class="read-status"></span></p>
           <div class="card-actions">
             <button class="trash-btn">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -39,145 +60,8 @@
             </button>
             <button class="toggle-btn">Toggle Read</button>
           </div>
-        </div>
-        <div class="card">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <title>book</title>
-            <path
-              d="M18,22A2,2 0 0,0 20,20V4C20,2.89 19.1,2 18,2H12V9L9.5,7.5L7,9V2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18Z"
-            />
-          </svg>
-          <p>Name: <span class="book-name">hello</span></p>
-          <p>Author: <span class="author-name">como</span></p>
-          <p>Number of pages: <span class="number-pages">estas</span></p>
-          <p>Have read?... no</p>
-          <div class="card-actions">
-            <button class="trash-btn">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <title>delete</title>
-                <path
-                  d="M18,19C18,20.66 16.66,22 15,22H8C6.34,22 5,20.66 5,19V7H4V4H8.5L9.5,3H13.5L14.5,4H19V7H18V19M6,7V19C6,20.1 6.9,21 8,21H15C16.1,21 17,20.1 17,19V7H6M18,6V5H14L13,4H10L9,5H5V6H18M8,9H9V19H8V9M14,9H15V19H14V9Z"
-                />
-              </svg>
-            </button>
-            <button class="toggle-btn">Toggle Read</button>
-          </div>
-        </div>
-        <div class="card">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <title>book</title>
-            <path
-              d="M18,22A2,2 0 0,0 20,20V4C20,2.89 19.1,2 18,2H12V9L9.5,7.5L7,9V2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18Z"
-            />
-          </svg>
-          <p>Name: <span class="book-name">hello</span></p>
-          <p>Author: <span class="author-name">como</span></p>
-          <p>Number of pages: <span class="number-pages">estas</span></p>
-          <p>Have read?... no</p>
-          <div class="card-actions">
-            <button class="trash-btn">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <title>delete</title>
-                <path
-                  d="M18,19C18,20.66 16.66,22 15,22H8C6.34,22 5,20.66 5,19V7H4V4H8.5L9.5,3H13.5L14.5,4H19V7H18V19M6,7V19C6,20.1 6.9,21 8,21H15C16.1,21 17,20.1 17,19V7H6M18,6V5H14L13,4H10L9,5H5V6H18M8,9H9V19H8V9M14,9H15V19H14V9Z"
-                />
-              </svg>
-            </button>
-            <button class="toggle-btn">Toggle Read</button>
-          </div>
-        </div>
-        <div class="card">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <title>book</title>
-            <path
-              d="M18,22A2,2 0 0,0 20,20V4C20,2.89 19.1,2 18,2H12V9L9.5,7.5L7,9V2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18Z"
-            />
-          </svg>
-          <p>Name: <span class="book-name">hello</span></p>
-          <p>Author: <span class="author-name">como</span></p>
-          <p>Number of pages: <span class="number-pages">estas</span></p>
-          <p>Have read?... no</p>
-          <div class="card-actions">
-            <button class="trash-btn">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <title>delete</title>
-                <path
-                  d="M18,19C18,20.66 16.66,22 15,22H8C6.34,22 5,20.66 5,19V7H4V4H8.5L9.5,3H13.5L14.5,4H19V7H18V19M6,7V19C6,20.1 6.9,21 8,21H15C16.1,21 17,20.1 17,19V7H6M18,6V5H14L13,4H10L9,5H5V6H18M8,9H9V19H8V9M14,9H15V19H14V9Z"
-                />
-              </svg>
-            </button>
-            <button class="toggle-btn">Toggle Read</button>
-          </div>
-        </div>
-        <div class="card">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <title>book</title>
-            <path
-              d="M18,22A2,2 0 0,0 20,20V4C20,2.89 19.1,2 18,2H12V9L9.5,7.5L7,9V2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18Z"
-            />
-          </svg>
-          <p>Name: <span class="book-name">hello</span></p>
-          <p>Author: <span class="author-name">como</span></p>
-          <p>Number of pages: <span class="number-pages">estas</span></p>
-          <p>Have read?... no</p>
-          <div class="card-actions">
-            <button class="trash-btn">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <title>delete</title>
-                <path
-                  d="M18,19C18,20.66 16.66,22 15,22H8C6.34,22 5,20.66 5,19V7H4V4H8.5L9.5,3H13.5L14.5,4H19V7H18V19M6,7V19C6,20.1 6.9,21 8,21H15C16.1,21 17,20.1 17,19V7H6M18,6V5H14L13,4H10L9,5H5V6H18M8,9H9V19H8V9M14,9H15V19H14V9Z"
-                />
-              </svg>
-            </button>
-            <button class="toggle-btn">Toggle Read</button>
-          </div>
-        </div>
-        <div class="card">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <title>book</title>
-            <path
-              d="M18,22A2,2 0 0,0 20,20V4C20,2.89 19.1,2 18,2H12V9L9.5,7.5L7,9V2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18Z"
-            />
-          </svg>
-          <p>Name: <span class="book-name">hello</span></p>
-          <p>Author: <span class="author-name">como</span></p>
-          <p>Number of pages: <span class="number-pages">estas</span></p>
-          <p>Have read?... no</p>
-          <div class="card-actions">
-            <button class="trash-btn">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <title>delete</title>
-                <path
-                  d="M18,19C18,20.66 16.66,22 15,22H8C6.34,22 5,20.66 5,19V7H4V4H8.5L9.5,3H13.5L14.5,4H19V7H18V19M6,7V19C6,20.1 6.9,21 8,21H15C16.1,21 17,20.1 17,19V7H6M18,6V5H14L13,4H10L9,5H5V6H18M8,9H9V19H8V9M14,9H15V19H14V9Z"
-                />
-              </svg>
-            </button>
-            <button class="toggle-btn">Toggle Read</button>
-          </div>
-        </div>
-        <div class="card">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <title>book</title>
-            <path
-              d="M18,22A2,2 0 0,0 20,20V4C20,2.89 19.1,2 18,2H12V9L9.5,7.5L7,9V2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18Z"
-            />
-          </svg>
-          <p>Name: <span class="book-name">hello</span></p>
-          <p>Author: <span class="author-name">como</span></p>
-          <p>Number of pages: <span class="number-pages">estas</span></p>
-          <p>Have read?... no</p>
-          <div class="card-actions">
-            <button class="trash-btn">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <title>delete</title>
-                <path
-                  d="M18,19C18,20.66 16.66,22 15,22H8C6.34,22 5,20.66 5,19V7H4V4H8.5L9.5,3H13.5L14.5,4H19V7H18V19M6,7V19C6,20.1 6.9,21 8,21H15C16.1,21 17,20.1 17,19V7H6M18,6V5H14L13,4H10L9,5H5V6H18M8,9H9V19H8V9M14,9H15V19H14V9Z"
-                />
-              </svg>
-            </button>
-            <button class="toggle-btn">Toggle Read</button>
-          </div>
-        </div>
+        </div> -->
+        
       </div>
       <button class="new-book-btn">New Book</button>
     </div>
