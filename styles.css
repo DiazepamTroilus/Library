@@ -52,7 +52,7 @@ h1 {
   border-radius: 12px;
   height: auto;
   padding: 24px;
-  width: auto;
+  width: 400px;
 }
 .card svg:hover {
   fill: rgb(255, 227, 66);
