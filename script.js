@@ -16,6 +16,7 @@ newBookbtn.addEventListener("click", function (e) {
 });
 
 closeModal.addEventListener("click", function (e) {
+  e.preventDefault();
   modal.close();
 });
 modal.addEventListener("submit", function (e) {

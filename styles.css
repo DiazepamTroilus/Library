@@ -25,7 +25,9 @@ h1 {
 }
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  grid-template-rows: auto;
+  /* flex-wrap: wrap; */
   border: 2px solid white;
   padding: 32px;
   gap: 28px;
@@ -52,7 +54,7 @@ h1 {
   border-radius: 12px;
   height: auto;
   padding: 24px;
-  width: 400px;
+  width: auto;
 }
 .card svg:hover {
   fill: rgb(255, 227, 66);
